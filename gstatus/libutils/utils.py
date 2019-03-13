@@ -62,9 +62,11 @@ def version_ok(this_version, target_version):
     (this_major, this_minor) = this_version.translate(None,string.ascii_letters).split('.')
     (tgt_major, tgt_minor) = target_version.split('.')
 
-    if (int(this_major) >= int(tgt_major) and
-            (int(this_minor) >= int(tgt_minor))):
-        return True
+    if (int(this_major) >= int(tgt_major)):
+        if (int(this_minor) >= int(tgt_minor)):
+            return True
+        else:
+            return False
     else:
         return False
 
