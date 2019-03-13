@@ -72,8 +72,6 @@ def version_ok(this_version, target_version):
                 return False
         else:
             return False
-    else:
-        return False
 
 
 def major_minor(version_string):
