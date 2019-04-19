@@ -426,7 +426,7 @@ class Cluster(object):
                 self.messages.append("WARNING -> Write requests may fail against volume '%s'" % this_volume.name)
                 self.status = 'unhealthy'
 
-                # 2. Check for conditions detected at the node level
+        # 2. Check for conditions detected at the node level
         for uuid in self.node:
             this_node = self.node[uuid]
             if this_node.state != '1':
